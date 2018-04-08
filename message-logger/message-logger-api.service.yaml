@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: message-logger-api-service
+spec:
+  selector:
+    app: message-logger
+    tier: backend
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3000
+  type: NodePort

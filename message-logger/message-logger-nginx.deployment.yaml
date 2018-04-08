@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: message-logger-nginx-deployment
+  labels:
+    app: message-logger
+    tier: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: message-logger
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: message-logger
+        tier: frontend
+    spec:
+      containers:
+      - name: message-logger-nginx
+        image: sealedsaint/message-logger-nginx
+        imagePullPolicy: "Always"
+        ports:
+        - containerPort: 80
