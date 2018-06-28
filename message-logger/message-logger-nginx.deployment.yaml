@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: message-logger-nginx-deployment
+  name: message-logger-nginx
   labels:
     app: message-logger
     tier: frontend

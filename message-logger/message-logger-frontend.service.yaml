@@ -1,9 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: message-logger-frontend-service
+  name: message-logger-frontend
   labels:
     app: message-logger
+    tier: frontend
 spec:
   selector:
     app: message-logger

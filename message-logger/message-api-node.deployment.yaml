@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: message-api-node-deployment
+  name: message-api-node
   labels:
     app: message-logger
     tier: backend
@@ -18,7 +18,7 @@ spec:
         tier: backend
     spec:
       containers:
-      - name: message-api-node
+      - name: message-api
         image: sealedsaint/message-api-node
         imagePullPolicy: "Always"
         ports:
